@@ -1,5 +1,5 @@
 import React from 'react'
-import Todolist from './componets/Todolist'
+import Todolist from './componets/todo/Todolist'
 import Graph from './componets/Graph'
 const App = () => {
   return (

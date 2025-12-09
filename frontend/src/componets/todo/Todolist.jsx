@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import Showtodo from "./Showtodo";
 const Todolist = () => {
   let [invalue, setinvalue] = useState({
     tasklist: "",
@@ -21,7 +22,10 @@ const Todolist = () => {
        let post = await axios.post("http://localhost:3000/api/data/daily",{
               task:invalue.tasklist 
        })
-      console.log(post)
+       .then((res)=>{
+        console.log(res)
+       })
+      
      } catch (error) {
       console.log(error)
      }
@@ -61,6 +65,8 @@ const Todolist = () => {
       </div>
       <p className="text-white">{error}</p>
       {/* output */}
+     
+      <Showtodo/>
       <div className=" w-[70%] m-auto mt-5 ">
         {output.map((e, i) => (
           <div className=" rounded-2xl bg-gray-400 overflow-clip text-black font-bold mt-3 p-3 text-center grid sm:grid-cols-12 gap-4" key={i}>
