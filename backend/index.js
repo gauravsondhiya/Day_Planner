@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/api/data', router);
 
 app.get("/",(req,res)=>{
-    res.send("check server")
+    res.send("server running")
 })
 
 app.listen(3000)
