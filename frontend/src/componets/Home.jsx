@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Graph from "./Graph/Graph";
+import Todolist from "./todo/Todolist";
 
 const Home = () => {
   let [input_value, setinputvalue] = useState();
@@ -36,6 +37,7 @@ const Home = () => {
         </button>
       </div>
       <Graph props={valuesend} />
+      <Todolist/>
     </div>
   );
 };

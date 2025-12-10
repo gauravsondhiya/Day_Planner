@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const tasklist = new Schema({
+  key:String,
+  day:Number,
+  completed:Boolean,
   task: String, 
 });
 
