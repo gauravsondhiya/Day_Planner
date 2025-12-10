@@ -1,10 +1,11 @@
 import express from 'express'
-import { getdata,Todo_controller } from '../controller/Todo_controller.js';
+import { getdata,post_data,deleteData } from '../controller/Todo_controller.js';
 const router = express.Router();
 
 
-router.post("/daily",Todo_controller)
+router.post("/data",post_data)
 router.get("/data",getdata)
+router.delete("/data/:id", deleteData);
 
 
 export default router
