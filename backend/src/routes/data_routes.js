@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/data",post_data)
 router.get("/data",getdata)
-router.delete("/data/:id", deleteData);
+router.delete("/data", deleteData);
 
 
 export default router

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Pomodaro() {
+const Pomodaro = () => {
   return (
     <div>Pomodaro</div>
   )

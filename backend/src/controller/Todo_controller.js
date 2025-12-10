@@ -4,7 +4,7 @@ export const post_data =async (req,res) => {
   let task= req.body
   const datasave = new listmodel(task)
      datasave.save() 
-  res.send("hello ji controller se bol rha hu")
+  res.send("data uploaded")
 }
 
 export const getdata = async (req,res)=>{
@@ -13,7 +13,7 @@ export const getdata = async (req,res)=>{
 }
 
 export const deleteData = async (req, res) => {
-  let { id } = req.params;
-  await listmodel.findByIdAndDelete(id);
+   let task= req.body
+  await listmodel.deleteOne(task);
   res.json("value deleted");
 }
