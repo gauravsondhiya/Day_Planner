@@ -1,10 +1,14 @@
 import React from "react";
+import Todolist from "../todo/Todolist";
+import { useState } from "react";
 
 const Graph = (days) => {
   let num = Number(days.props) || 0;
   const arr = new Array(num).fill(0);
+  let[num_send,setnum_send]= useState()
  let calender_no=(day)=>{
-  console.log(day)
+  setnum_send(day)
+  // console.log(day)
  }
   return (
     <div className="w-[70%] m-auto  mt-5">
@@ -22,6 +26,7 @@ const Graph = (days) => {
           </button>
         ))}
       </div>
+      <Todolist props={num_send}/>
     </div>
   );
 };

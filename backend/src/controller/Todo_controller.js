@@ -5,9 +5,9 @@ export const post_data = async (req, res) => {
     const { key, task, day, completed } = req.body;
 
     // Validate (optional but recommended)
-    if (!key || !task || !day) {
-      return res.status(400).json({ message: "Missing required fields" });
-    }
+    // if (!key || !task || !day) {
+    //   return res.status(400).json({ message: "Missing required fields" });
+    // }
 
     const datasave = await listmodel.create({
       key,
